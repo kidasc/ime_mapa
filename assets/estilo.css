@@ -1,0 +1,21 @@
+.mapa {
+
+        
+        float: left;
+        margin: 200px;
+}
+
+.menu {
+
+    float: right;
+    margin: 200px;
+}
+
+.rota {
+    stroke: gradient;
+    
+
+}
+
+
+#canvas{border:1px solid red; }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel='stylesheet'  href='assets/estilo.css' />
+  <script src='assets/rotas.js'></script>
+  <title> Mapa interativo do IME-USP </title>
+</head>
+
+<body>
+
+  <!--h1 style="color:green;">Bloco -B- Térreo</h1-->
+  <h1 style="color:powderblue;">Bloco -B- Térreo</h1>
+  <!--h1 style="color:blue;">Bloco -B- Térreo</h1>
+  <h1 style="color:red;">Bloco -B- Térreo</h1-->
+
+
+<!--table bgcolor=lightblue align=center style="width:1024px" style="height:400px" border="2"-->
+<table bgcolor=lightblue align=center width=1024px height=450px  border="2">
+  <tr align=center>
+    <td width=75%>Mapa</td>
+    <td>Locais</td>
+  </tr>
+  <!--tr style="height:40px" -->
+  <tr>
+	  <td width="768" background="images/B.png">
+      <!--img src="images/B.png" alt="mapa" width="768" heigth="450"  /-->
+      <canvas id="canvas" width="768" height="450"></canvas>  
+    </td>
+	<td align=center>
+		<button onclick="portariaToJaci()"> Auditório Jací Monteiro</button><br>
+		<hr size="2" width="50%" align="center" color=Blue>
+		<button onclick="portariaToScg()"> Seção de Alunos</button><br>
+		<button onclick="portariaToScpg()"> Pós Graduação</button><br>
+		<button onclick="portariaToComi()"> Comissões</button><br>
+		<button onclick="portariaToCec()"> CEC</button><br>
+		<hr size="2" width="50%" align="center" color=Green>
+		<button onclick="portariaToGraf()"> Gráfica</button><br>
+		<button onclick="portariaToAumox()"> Aumoxarifado</button><br>
+		<hr size="2" width="50%" align="center" color=Green>
+		<button onclick="portariaToGrem()"> Grêmio IME</button><br>
+		<button onclick="portariaToCamat()"> CAMat</button><br>
+		<hr size="2" width="50%" align="center" color=Yellow>
+		<button onclick="portariaToWcF()"> WC-Fem</button><br>
+		<button onclick="portariaToWcM()"> WC-Masc</button><br>
+		<hr size="2" width="50%" align="center" color=Orange>
+		<button onclick="portariaToElev()"> Elevador Acessibilidade</button><br>
+		<button onclick="portariaToWcAF()"> WC-Acessível-F</button><br>
+		<button onclick="portariaToWcAM()"> WC-Acessível-M</button><br>
+		<hr size="2" width="50%" align="center" color=red><br>
+		<button onclick="window.location.reload();" style="background-color:red; border-color:blue; color:white">______Finalizar Consulta______</button><br>
+		
+		
+	  </td>
+  </tr>
+
+</table>
+
+<table align=center width=1024px border="1">
+	<tr>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Age</th>
+	</tr>
+	<tr>
+		<td height=450px background="images/B.png" >Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+</table>
+
+<div class="rota">
+
+
+
+</div>
+
+
+</body>
+
+</html>

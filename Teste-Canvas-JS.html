@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel='stylesheet'  href='assets/estilo.css' />
+  <script src='assets/rotas.js'></script>
+  <title> Mapa interativo do IME-USP </title>
+</head>
+
+
+
+
+	<body>
+        <canvas id="elementoCanvas">
+            O que for escrito aqui, aparecerá SOMENTE
+            quando o navegador não puder renderizar o canvas
+            Claro que tags HTML são aceitas.
+        </canvas>
+    </body>
+
+    <script>
+          // sim, addEventListener não funciona em IE
+          document.addEventListener('load', canvasHandler, false);
+    <script>
+
+// Vamos criar umas variáveis globais para facilitar
+// mas fica mais "bonito" e organizado se utilizar namespaces
+var canvas= null;
+var ctx= null;
+
+// aqui, a nossa função a ser chamada assim que a página carregar
+canvasHandler= function(){
+    // antes de tudo, simplesmente pegamos o elemento canvas
+    canvas= document.getElementById('theCanvasElement');
+    // agora nós precisaremos acessar o CONTEXT para trabalhar
+    ctx= canvas.getContext('2d');
+}
+
+    canvas.width= 480;
+    canvas.height= 340;
+
+    var img= new Image();
+    img.src= 'url.png';
+
+
+    // instancia uma nova imagem
+    var img= new Image();
+	
+    // usaremos a imagem após ela ser carregada
+    img.addEventListener('load', function(){
+        // após baixar a imagem, podemos desenha-la no canvas
+        ctx.drawImage(this);
+        // onde this representa a imagem recém carregada
+    });
+    // então especificamos a url a iniciar o carregamento
+    img.src= 'url.png';
+
+    // desenha a imagem na posição left=30 e top=30
+    ctx.drawImage(this, 30, 30);
+    // desenhará a imagem na posição 0/0, alterando seu tamanho
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // mais complexo, desenha e recorta a imagem (crop)
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+
+
+
+</body>
+
+</html>
+
